@@ -1,0 +1,197 @@
+body {
+    margin: 0;
+    font-family: 'Raleway','Helvetica', 'Arial', sans-serif;
+    
+}
+
+ul {
+    margin: 0;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    height: 100vh;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column; 
+    background-image: url(./img/trenzal.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.header::after {
+    background: #7378dc;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: .85;
+    position: absolute;
+    top: 0;
+    transition: all .25s ease;
+    width: 100%;
+}
+
+.nav {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+}
+
+.logo-link {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.logo-item {
+    display: flex;
+    margin-left: 30px;
+    height: 100px;
+    transition: all 1.5s ease;
+}
+
+.logo-item:hover {
+
+    transform: rotateY(180deg);
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list li {
+    
+    padding: 0 10px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nav-list-link {
+    position: relative;
+    transition: all 1s ease;
+}
+
+.nav-list-link::after {
+
+    background: #000000;
+    bottom: -8px;
+    content: "";
+    height: 3px;
+    left: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transition: all 1s ease;
+    width: 100%;
+}
+
+.nav-list-link:hover {
+    color: #000000;
+}
+
+.nav-list-link:hover::after {
+    transform: scaleX(1);
+}
+
+.nav-list li:last-of-type a {
+  display: flex;
+  align-items: center;
+  background-color: #d84d5f;
+  height: 30px;
+  padding: 0 10px;
+  border-radius: 10px;
+  transition: all 1s ease;
+}
+
+.heart-icon {
+    color: white;
+    margin-right: 5px;
+}
+
+.nav-list li:last-of-type a:hover {
+    background-color: #ef0423;
+}
+
+.nav-list li:last-of-type a svg {
+    width: 0.9em;
+    transition: all 1s ease;
+  }
+
+  .nav-list li:last-of-type a svg:hover {
+    width: 1.3em;
+  }
+
+  .nav-toggle {
+    font-size: 2rem;
+    color: white;
+  }
+
+  .burger-icon {
+    display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    vertical-align: -0.125em;
+    cursor: pointer;
+  }
+
+  .capital-letters {
+    margin: 250px 99px;
+    position: relative;
+    z-index: 1;
+    }
+
+    .header-content {
+        font-size: 56px;
+        line-height: 84px;
+    }
+
+    .header-content-color {
+        color: white;
+    }
+
+    .capital-letters-btn {
+    display: block;
+    background: #17baaa;
+    color: #fff;
+    align-items: center;
+    border: 0;
+    box-sizing: border-box;
+    display: inline-flex;
+    font-size: 14px;
+    font-size: .875rem;
+    font-weight: 700;
+    justify-content: center;
+    max-width: 100%;
+    min-height: 40px;
+    outline: none;
+    padding: 0 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all .25s ease;
+    }
+
+    .capital-letters-btn:hover {
+        background-color: #4249c7 ;
+    }
+
+  @media screen and (min-width: 993px) {
+    .nav-toggle {
+        display: none;
+    }
+  }
+
+  @media screen and (max-width: 993px) {
+    .nav-list {
+        display: none;
+        }
+  }
